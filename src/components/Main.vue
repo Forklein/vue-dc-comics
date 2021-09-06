@@ -139,6 +139,7 @@ $color-jumbo: #0282f9;
   justify-content: space-around;
   color: gray;
   font-size: 14px;
+  padding: 20px;
   background-image: url("../assets/img/footer-bg.jpg");
   background-size: cover;
 }
