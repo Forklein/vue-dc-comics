@@ -22,9 +22,22 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #0e0e0e;
 }
-#app {
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  padding: 15px;
+  text-decoration: none;
 }
 </style>

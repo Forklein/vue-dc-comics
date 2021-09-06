@@ -1,5 +1,5 @@
 <template>
-  <div>{{ Test }}</div>
+  <div>{{ test }}</div>
 </template>
 
 <script>
@@ -7,7 +7,7 @@ export default {
   name: "Footer",
   data() {
     return {
-      Test: "test",
+      test: "test",
     };
   },
   computed: {},
