@@ -86,10 +86,10 @@ export default {
           image: "buy-comics-shop-locator.png",
           text: "COMIC SHOP LOCATOR",
         },
-        {
-          image: "buy-dc-power-visa.svg",
-          text: "DC POWER VISA",
-        },
+        // {
+        //   image: "buy-dc-power-visa.svg",
+        //   text: "DC POWER VISA",
+        // },
       ],
     };
   },
