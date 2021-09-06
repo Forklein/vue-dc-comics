@@ -3,9 +3,9 @@
     <img src="../assets/img/dc-logo.png" alt="Logo" />
     <nav>
       <ul>
-        <li v-for="(link, index) in navbar" :key="index">
-          <a href="#">
-            {{ link }}
+        <li v-for="(link, index) in data" :key="index">
+          <a :class="{ active: link.current }" :href="link.url">
+            {{ link.text }}
           </a>
         </li>
       </ul>
@@ -18,18 +18,58 @@ export default {
   name: "Header",
   data() {
     return {
-      Test: "test",
-      navbar: [
-        "Characters",
-        "Comics",
-        "Movies",
-        "Tv",
-        "Games",
-        "Collectibles",
-        "Videos",
-        "Fans",
-        "News",
-        "Shop",
+      test: "test",
+      data: [
+        {
+          text: "Characters",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Comics",
+          url: "#",
+          current: true,
+        },
+        {
+          text: "Movies",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "TV",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Games",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Collectibles",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Videos",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Fans",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "News",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Shop",
+          url: "#",
+          current: false,
+        },
       ],
     };
   },
@@ -39,7 +79,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 header {
   background-color: #fff;
   padding: 10px;
@@ -56,5 +96,9 @@ a {
   font-size: 13px;
   color: #000;
   text-transform: uppercase;
+}
+
+.active {
+  border-bottom: 1px solid #0282f9;
 }
 </style>
