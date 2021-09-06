@@ -11,48 +11,53 @@
     </section>
     <section id="faq">
       <div class="box">
-        <h3>Dc Comics</h3>
-        <ul>
-          <li>Characters</li>
-          <li>Comics</li>
-          <li>Movies</li>
-          <li>TV</li>
-          <li>Games</li>
-          <li>Videos</li>
-          <li>News</li>
-        </ul>
-        <br /><br />
-        <h3>Shop</h3>
-        <ul>
-          <li>Shop DC</li>
-          <li>Shop DC Collectibles</li>
-        </ul>
+        <div>
+          <h3>Dc Comics</h3>
+          <ul>
+            <li>Characters</li>
+            <li>Comics</li>
+            <li>Movies</li>
+            <li>TV</li>
+            <li>Games</li>
+            <li>Videos</li>
+            <li>News</li>
+          </ul>
+          <br /><br />
+          <h3>Shop</h3>
+          <ul>
+            <li>Shop DC</li>
+            <li>Shop DC Collectibles</li>
+          </ul>
+        </div>
+        <div>
+          <h3>DC</h3>
+          <ul>
+            <li>Terms of use</li>
+            <li>Privacy Policy(new)</li>
+            <li>Ad Choices</li>
+            <li>Advertising</li>
+            <li>Job</li>
+            <li>Subscriptions</li>
+            <li>Talent Workshops</li>
+            <li>CPSC Certificates</li>
+            <li>Rating</li>
+            <li>Shop Help</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div>
+          <h3>SITES</h3>
+          <ul>
+            <li>DC</li>
+            <li>MAD Magazine</li>
+            <li>DC Kids</li>
+            <li>DC Universe</li>
+            <li>DC Power Visa</li>
+          </ul>
+        </div>
       </div>
-      <div class="box">
-        <h3>DC</h3>
-        <ul>
-          <li>Terms of use</li>
-          <li>Privacy Policy(new)</li>
-          <li>Ad Choices</li>
-          <li>Advertising</li>
-          <li>Job</li>
-          <li>Subscriptions</li>
-          <li>Talent Workshops</li>
-          <li>CPSC Certificates</li>
-          <li>Rating</li>
-          <li>Shop Help</li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>SITES</h3>
-        <ul>
-          <li>DC</li>
-          <li>MAD Magazine</li>
-          <li>DC Kids</li>
-          <li>DC Universe</li>
-          <li>DC Power Visa</li>
-        </ul>
+      <div class="img-box">
+        <img src="../assets/img/dc-logo-bg.png" alt="" />
       </div>
     </section>
   </main>
@@ -101,14 +106,14 @@ export default {
 <style scoped lang="scss">
 $color-jumbo: #0282f9;
 
-ul,
-li {
+#icons ul,
+#icons li {
   display: flex;
   align-items: center;
   padding: 20px;
 }
 
-img {
+#icons img {
   width: 50px;
 }
 
@@ -126,21 +131,11 @@ img {
 
 #faq {
   display: flex;
-  padding: 50px 350px;
+  justify-content: space-around;
   color: gray;
   font-size: 14px;
   background-image: url("../assets/img/footer-bg.jpg");
-  background-size: contain;
-}
-
-#faq ul {
-  display: block;
-  padding: 0;
-}
-
-#faq li {
-  display: block;
-  padding: 0;
+  background-size: cover;
 }
 
 #faq h3 {
@@ -151,6 +146,14 @@ img {
 }
 
 #faq .box {
-  margin: 20px;
+  display: flex;
+}
+
+#faq div {
+  margin: 0 50px;
+}
+
+#faq img {
+  max-width: 50%;
 }
 </style>
