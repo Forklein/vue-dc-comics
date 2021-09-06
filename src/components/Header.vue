@@ -3,7 +3,7 @@
     <img src="../assets/img/dc-logo.png" alt="Logo" />
     <nav>
       <ul>
-        <li v-for="(link, index) in data" :key="index">
+        <li v-for="(link, index) in navbar" :key="index">
           <a :class="{ active: link.current }" :href="link.url">
             {{ link.text }}
           </a>
@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       test: "test",
-      data: [
+      navbar: [
         {
           text: "Characters",
           url: "#",

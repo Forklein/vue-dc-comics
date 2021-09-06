@@ -3,9 +3,9 @@
     <section id="content">Content goes here</section>
     <section id="icons">
       <ul>
-        <li>
-          <img src="../assets/img/buy-comics-digital-comics.png" alt="icon" />
-          <p>Test</p>
+        <li v-for="(icon, index) in icons" :key="index">
+          <img :src="`../assets/img/${icon.image}`" alt="icon" />
+          <p>{{ icon.text }}</p>
         </li>
       </ul>
     </section>
@@ -18,6 +18,28 @@ export default {
   data() {
     return {
       test: "test",
+      icons: [
+        {
+          image: "buy-comics-digital-comics.png",
+          text: "DIGITAL COMICS",
+        },
+        {
+          image: "buy-comics-merchandise.png",
+          text: "DC MERCHANDISE",
+        },
+        {
+          image: "buy-comics-subscriptions.png",
+          text: "SUBSCRIPTION",
+        },
+        {
+          image: "buy-comics-shop-locator.png",
+          text: "COMIC SHOP LOCATOR",
+        },
+        {
+          image: "buy-dc-power-visa.svg",
+          text: "DC POWER VISA",
+        },
+      ],
     };
   },
   computed: {},
