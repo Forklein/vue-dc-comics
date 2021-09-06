@@ -113,6 +113,11 @@ $color-jumbo: #0282f9;
   padding: 20px;
 }
 
+#icons ul li p {
+  color: #fff;
+  margin-left: 20px;
+}
+
 #icons img {
   width: 50px;
 }
