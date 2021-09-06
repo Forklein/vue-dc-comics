@@ -4,7 +4,7 @@
     <section id="icons">
       <ul>
         <li v-for="(icon, index) in icons" :key="index">
-          <img :src="getImgUrl(icon.image)" alt="icon" />
+          <img :src="getImage(icon.image)" alt="icon" />
           <p>{{ icon.text }}</p>
         </li>
       </ul>
@@ -95,8 +95,8 @@ export default {
   },
   computed: {},
   methods: {
-    getImgUrl(pic) {
-      return require(`@/assets/img/${pic}`);
+    getImage(link) {
+      return require(`@/assets/img/${link}`);
     },
   },
   created() {},
