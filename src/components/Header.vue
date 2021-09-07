@@ -80,25 +80,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/_mixins.scss";
+@import "@/assets/scss/_variable.scss";
+
 header {
-  background-color: #fff;
+  background-color: $color-white;
   padding: 10px;
   margin-top: 20px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-ul {
-  display: flex;
+  @include flex("evenly");
 }
 
-a {
-  font-size: 13px;
-  color: #000;
-  text-transform: uppercase;
+ul {
+  @include flex;
+  a {
+    font-size: 13px;
+    color: #000;
+    text-transform: uppercase;
+  }
 }
 
 .active {
-  border-bottom: 1px solid #0282f9;
+  border-bottom: 1px solid $color-jumbo;
 }
 </style>

@@ -104,62 +104,56 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$color-jumbo: #0282f9;
-
-#icons ul,
-#icons li {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-}
-
-#icons ul li p {
-  color: #fff;
-  margin-left: 20px;
-}
-
-#icons img {
-  width: 50px;
-}
+@import "@/assets/scss/_mixins.scss";
+@import "@/assets/scss/_variable.scss";
 
 #content {
-  color: #fff;
+  color: $color-white;
   font-size: 36px;
   padding: 50px 350px;
 }
 
 #icons {
   background-color: $color-jumbo;
-  display: flex;
-  justify-content: center;
+  @include flex;
+  ul {
+    @include flex;
+    padding: 20px;
+    li {
+      @include flex;
+      padding: 20px;
+      img {
+        width: 50px;
+      }
+    }
+    p {
+      color: $color-white;
+      margin-left: 20px;
+    }
+  }
 }
 
 #faq {
-  display: flex;
-  justify-content: space-around;
+  @include flex("around");
   color: gray;
   font-size: 14px;
   padding: 20px;
   background-image: url("../assets/img/footer-bg.jpg");
   background-size: cover;
-}
-
-#faq h3 {
-  padding: 10px 0;
-  color: #fff;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-#faq .box {
-  display: flex;
-}
-
-#faq div {
-  margin: 0 50px;
-}
-
-#faq img {
-  max-width: 50%;
+  h3 {
+    padding: 10px 0;
+    color: $color-white;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .box {
+    @include flex;
+  }
+  div {
+    margin: 0 50px;
+  }
+  img {
+    max-width: 50%;
+  }
 }
 </style>

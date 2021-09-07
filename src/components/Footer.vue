@@ -33,17 +33,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "@/assets/scss/_mixins.scss";
+@import "@/assets/scss/_variable.scss";
+
 footer {
+  @include flex("evenly");
   background-color: #303030;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   padding: 20px;
 }
 
 section:first-child {
-  color: #fff;
-  border: 1px solid #0282f9;
+  color: $color-white;
+  border: 1px solid $color-jumbo;
   padding: 20px;
   text-transform: uppercase;
 }
@@ -53,10 +54,8 @@ img {
 }
 
 #icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #0282f9;
+  @include flex;
+  color: $color-jumbo;
   text-transform: uppercase;
 }
 </style>

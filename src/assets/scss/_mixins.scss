@@ -1,0 +1,22 @@
+@mixin reset {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+@mixin flex($type: 'center'){
+    display: flex;
+    align-items: center;
+    @if $type == 'between' {
+        justify-content: space-between;
+    }@else if $type == 'around' {
+        justify-content: space-around;
+    }@else if $type == 'evenly' {
+        justify-content: space-evenly;
+    }@else{
+        justify-content: center;
+    }
+}
+

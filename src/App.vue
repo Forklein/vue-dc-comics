@@ -22,11 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "@/assets/scss/_mixins.scss";
+@include reset;
 
 body {
   background-color: #0e0e0e;
