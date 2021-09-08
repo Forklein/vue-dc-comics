@@ -1,6 +1,13 @@
 <template>
   <main>
-    <section id="content">Content goes here</section>
+    <section class="container" id="content">
+      <Cards
+        v-for="(comic, index) in comics"
+        :key="index"
+        :text="comic.series"
+        :url="comic.thumb"
+      />
+    </section>
     <section id="icons">
       <ul>
         <li v-for="(icon, index) in icons" :key="index">
@@ -64,14 +71,21 @@
 </template>
 
 <script>
-import icons from "../data/icons";
+import icons from "../data/icons.js";
+import Cards from "../components/Cards.vue";
+import comics from "../data/comics.js";
+
 export default {
   name: "Main",
   data() {
     return {
       test: "test",
       icons,
+      comics,
     };
+  },
+  components: {
+    Cards,
   },
   computed: {},
   methods: {
@@ -89,8 +103,10 @@ export default {
 
 #content {
   color: $color-white;
-  font-size: 36px;
-  padding: 50px 350px;
+  font-size: 12px;
+  padding: 50px 0;
+  @include flex;
+  flex-wrap: wrap;
 }
 
 #icons {
