@@ -7,6 +7,7 @@
         :text="comic.series"
         :url="comic.thumb"
       />
+      <h3>Load More</h3>
     </section>
     <section id="icons">
       <ul>
@@ -107,6 +108,13 @@ export default {
   padding: 50px 0;
   @include flex;
   flex-wrap: wrap;
+  h3 {
+    margin-top: 80px;
+    background-color: $color-jumbo;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 }
 
 #icons {
