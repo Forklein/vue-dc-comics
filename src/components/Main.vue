@@ -36,7 +36,7 @@
             <li>Shop DC Collectibles</li>
           </ul>
         </div>
-        <div>
+        <div class="flex-start">
           <h3>DC</h3>
           <ul>
             <li>Terms of use</li>
@@ -52,7 +52,7 @@
             <li>Contact Us</li>
           </ul>
         </div>
-        <div>
+        <div class="flex-start">
           <h3>SITES</h3>
           <ul>
             <li>DC</li>
@@ -150,6 +150,9 @@ export default {
   }
   img {
     max-width: 50%;
+  }
+  .flex-start {
+    align-self: flex-start;
   }
 }
 </style>

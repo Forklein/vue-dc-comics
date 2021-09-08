@@ -1,7 +1,11 @@
 <template>
   <div class="box-card">
-    <img :src="url" :alt="text" />
-    <p>{{ text }}</p>
+    <div class="img-card">
+      <img :src="url" :alt="text" />
+    </div>
+    <div class="text-card">
+      <p>{{ text }}</p>
+    </div>
   </div>
 </template>
 
@@ -20,9 +24,15 @@ export default {
 <style scoped lang="scss">
 .box-card {
   flex-basis: 200px;
-  padding: 20px;
-  img {
-    max-width: 100%;
+  height: 300px;
+  .img-card {
+    padding: 20px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .text-card {
+    padding: 0 20px;
   }
 }
 </style>
