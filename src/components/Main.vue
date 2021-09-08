@@ -64,33 +64,13 @@
 </template>
 
 <script>
+import icons from "../data/icons";
 export default {
   name: "Main",
   data() {
     return {
       test: "test",
-      icons: [
-        {
-          image: "buy-comics-digital-comics.png",
-          text: "DIGITAL COMICS",
-        },
-        {
-          image: "buy-comics-merchandise.png",
-          text: "DC MERCHANDISE",
-        },
-        {
-          image: "buy-comics-subscriptions.png",
-          text: "SUBSCRIPTION",
-        },
-        {
-          image: "buy-comics-shop-locator.png",
-          text: "COMIC SHOP LOCATOR",
-        },
-        {
-          image: "buy-dc-power-visa.svg",
-          text: "DC POWER VISA",
-        },
-      ],
+      icons,
     };
   },
   computed: {},
@@ -104,8 +84,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/_mixins.scss";
-@import "@/assets/scss/_variable.scss";
+@import "../assets/scss/_mixins.scss";
+@import "../assets/scss/_variable.scss";
 
 #content {
   color: $color-white;

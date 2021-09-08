@@ -1,76 +1,31 @@
 <template>
   <header>
-    <img src="../assets/img/dc-logo.png" alt="Logo" />
-    <nav>
-      <ul>
-        <li v-for="(link, index) in navbar" :key="index">
-          <a :class="{ active: link.current }" :href="link.url">
-            {{ link.text }}
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div class="topbar">
+      <img src="../assets/img/dc-logo.png" alt="Logo" />
+      <nav>
+        <ul>
+          <li v-for="(link, index) in navbar" :key="index">
+            <a :class="{ active: link.current }" :href="link.url">
+              {{ link.text }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="jumbotron">
+      <div class="current-series">Current Series</div>
+    </div>
   </header>
 </template>
 
 <script>
+import navbar from "../data/data";
 export default {
   name: "Header",
   data() {
     return {
       test: "test",
-      navbar: [
-        {
-          text: "Characters",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Comics",
-          url: "#",
-          current: true,
-        },
-        {
-          text: "Movies",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "TV",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Games",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Collectibles",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Videos",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Fans",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "News",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Shop",
-          url: "#",
-          current: false,
-        },
-      ],
+      navbar,
     };
   },
   computed: {},
@@ -80,14 +35,30 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/_mixins.scss";
-@import "@/assets/scss/_variable.scss";
+@import "../assets/scss/_mixins.scss";
+@import "../assets/scss/_variable.scss";
 
 header {
-  background-color: $color-white;
-  padding: 10px;
-  margin-top: 20px;
-  @include flex("evenly");
+  .topbar {
+    background-color: $color-white;
+    padding: 10px;
+    @include flex("evenly");
+  }
+  .jumbotron {
+    height: 400px;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover;
+    position: relative;
+  }
+  .current-series {
+    position: absolute;
+    top: 95%;
+    left: 20%;
+    background-color: $color-jumbo;
+    color: $color-white;
+    padding: 10px;
+    text-transform: uppercase;
+  }
 }
 
 ul {
